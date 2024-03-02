@@ -12,7 +12,31 @@ const StudentPortal = () => {
       });
   }, []);
 
+  const isValidDate = (dateString) => {
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    return dateString.match(dateRegex) !== null;
+  };
+
+  const isValidGrade = (gradeString) => {
+    return !isNaN(gradeString) && parseInt(gradeString) >= 1 && parseInt(gradeString) <= 12;
+  };
+
   const addStudent = (firstName, lastName, dateOfBirth, grade) => {
+    if (!firstName || !lastName || !dateOfBirth || !grade) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    if (!isValidDate(dateOfBirth)) {
+      alert('Invalid date format. Please use YYYY-MM-DD.');
+      return;
+    }
+
+    if (!isValidGrade(grade)) {
+      alert('Invalid grade. Please enter a number between 1 and 12.');
+      return;
+    }
+
     fetch("http://localhost:5000/students", {
       method: "POST",
       headers: {
@@ -49,6 +73,16 @@ const StudentPortal = () => {
   };
 
   const updateStudent = (id, firstName, lastName, dateOfBirth, grade) => {
+    if (!isValidDate(dateOfBirth)) {
+      alert('Invalid date format. Please use YYYY-MM-DD.');
+      return;
+    }
+
+    if (!isValidGrade(grade)) {
+      alert('Invalid grade. Please enter a number between 1 and 12.');
+      return;
+    }
+
     fetch(`http://localhost:5000/students/${id}`, {
       method: "PUT",
       headers: {
@@ -100,7 +134,10 @@ const StudentPortal = () => {
         <ul className="mt-4">
           {students.map((student) => (
             <li key={student.id} className="flex justify-between items-center p-2 border-b">
-              <span>{`${student.firstName} ${student.lastName}, Grade ${student.grade}`}</span>
+              <div>
+                <span>{`${student.firstName} ${student.lastName}, Grade ${student.grade}`}</span>
+                <p>Date of Birth: {student.dateOfBirth}</p>
+              </div>
               <div>
                 <button
                   className="bg-red-500 text-white py-1 px-2 rounded mr-2"
