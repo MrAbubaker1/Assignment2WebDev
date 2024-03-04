@@ -34,13 +34,6 @@
       "lastName": "Miller",
       "dateOfBirth": "1999-04-05",
       "grade": "10"
-    },
-    {
-      "firstName": "Adam",
-      "lastName": "ABUBU",
-      "dateOfBirth": "2001-10-14",
-      "grade": "12",
-      "id": "6fc2"
     }
   ]
 }

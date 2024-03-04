@@ -18,7 +18,7 @@ const StudentPortal = () => {
   };
 
   const isValidGrade = (gradeString) => {
-    return !isNaN(gradeString) && parseInt(gradeString) >= 1 && parseInt(gradeString) <= 12;
+    return !isNaN(gradeString) && parseInt(gradeString) >= 10 && parseInt(gradeString) <= 12;
   };
 
   const addStudent = (firstName, lastName, dateOfBirth, grade) => {
@@ -33,7 +33,7 @@ const StudentPortal = () => {
     }
 
     if (!isValidGrade(grade)) {
-      alert('Invalid grade. Please enter a number between 1 and 12.');
+      alert('Invalid grade. Please enter a grade between 10 and 12.');
       return;
     }
 
