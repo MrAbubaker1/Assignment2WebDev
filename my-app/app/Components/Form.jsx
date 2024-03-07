@@ -127,15 +127,18 @@ const StudentPortal = () => {
             placeholder="Grade"
             name="grade"
           />
-          <button className="bg-blue-500 text-white py-1 px-2 rounded mt-2" type="submit ">
+          <button className="bg-blue-500 text-white py-1 px-2 rounded mt-2" type="submit">
             Add Student
           </button>
         </form>
         <ul className="mt-4">
           {students.map((student) => (
-            <li key={student.id} className="flex justify-between items-center p-2 border-b">
+            <li
+              key={student.id}
+              className="flex justify-between items-center p-2 border border-black rounded mb-3"
+            >
               <div>
-                <span>{`${student.firstName} ${student.lastName}, Grade ${student.grade}`}</span>
+                <span >{`${student.firstName} ${student.lastName}, Grade ${student.grade}`}</span>
                 <p>Date of Birth: {student.dateOfBirth}</p>
               </div>
               <div>
