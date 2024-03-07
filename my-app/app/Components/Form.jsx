@@ -79,7 +79,7 @@ const StudentPortal = () => {
     }
 
     if (!isValidGrade(grade)) {
-      alert('Invalid grade. Please enter a number between 1 and 12.');
+      alert('Invalid grade. Please enter a number between 10 and 12.');
       return;
     }
 
