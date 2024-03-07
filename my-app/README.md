@@ -1,36 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Names: Amadou Diallo, Abdurahman Hassan, FALMATA OBSA, Zain Naeem, Adam Abubaker Program: New Generation Highschool Student Portal Groups9&12 March 1, 2024
 
-## Getting Started
+# Project Description: This project is a web application designed for the New Generation High School Administrator Portal, developed using Next.js. The portal provides a user-friendly interface for managing student information. The application takes several user inputs for adding new students, including their first name, last name, date of birth, and current grade, with some data validation including regular expressions to ensure accurate and valid entries. The student data is stored in a JSON server file, allowing data retrieval and modification. The main page displays a list of students, showcasing their names, grades, and date of birth, alongside an interactive form for administrators to effortlessly add and update student details. Additionally, the application features a navbar and footer that dynamically updates the current date, enhancing the overall user experience.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# We Used ChatGPT 3.5 to generate the list of students in db.json
