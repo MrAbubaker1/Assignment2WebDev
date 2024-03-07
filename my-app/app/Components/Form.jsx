@@ -127,7 +127,7 @@ const StudentPortal = () => {
             placeholder="Grade"
             name="grade"
           />
-          <button className="bg-blue-500 text-white py-1 px-2 rounded" type="submit">
+          <button className="bg-blue-500 text-white py-1 px-2 rounded mt-2" type="submit ">
             Add Student
           </button>
         </form>
