@@ -1,0 +1,5 @@
+# Names: Amadou Diallo, Abdurahman Hassan, FALMATA OBSA, Zain Naeem, Adam Abubaker Program: New Generation Highschool Student Portal Groups9&12 March 1, 2024
+
+# Project Description: This project is a web application designed for the New Generation High School Administrator Portal, developed using Next.js. The portal provides a user-friendly interface for managing student information. The application takes several user inputs for adding new students, including their first name, last name, date of birth, and current grade, with some data validation including regular expressions to ensure accurate and valid entries. The student data is stored in a JSON server file, allowing data retrieval and modification. The main page displays a list of students, showcasing their names, grades, and date of birth, alongside an interactive form for administrators to effortlessly add and update student details. Additionally, the application features a navbar and footer that dynamically updates the current date, enhancing the overall user experience.
+
+# We Used ChatGPT 3.5 to generate the list of students in db.json
