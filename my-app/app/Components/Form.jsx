@@ -99,10 +99,10 @@ const StudentPortal = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex flex-col items-center h-screen">
       <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Students</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mb-4">
           <input
             className="border p-2 mr-2"
             type="text"
@@ -131,44 +131,48 @@ const StudentPortal = () => {
             Add Student
           </button>
         </form>
-        <ul className="mt-4">
-          {students.map((student) => (
-            <li
-              key={student.id}
-              className="flex justify-between items-center p-2 border border-black rounded mb-3"
-            >
-              <div>
-                <span >{`${student.firstName} ${student.lastName}, Grade ${student.grade}`}</span>
-                <p>Date of Birth: {student.dateOfBirth}</p>
-              </div>
-              <div>
-                <button
-                  className="bg-red-500 text-white py-1 px-2 rounded mr-2"
-                  onClick={() => deleteStudent(student.id)}
-                >
-                  Delete
-                </button>
-                <button
-                  className="bg-green-600 text-white py-1 px-2 rounded"
-                  onClick={() =>
-                    updateStudent(
-                      student.id,
-                      prompt("Enter new first name", student.firstName),
-                      prompt("Enter new last name", student.lastName),
-                      prompt("Enter new date of birth", student.dateOfBirth),
-                      prompt("Enter new grade", student.grade)
-                    )
-                  }
-                >
-                  Update
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="overflow-auto max-h-60">
+          <ul className="mt-4">
+            {students.map((student) => (
+              <li
+                key={student.id}
+                className="flex justify-between items-center p-2 border border-black rounded mb-3"
+              >
+                <div>
+                  <span>{`${student.firstName} ${student.lastName}, Grade ${student.grade}`}</span>
+                  <p>Date of Birth: {student.dateOfBirth}</p>
+                </div>
+                <div>
+                  <button
+                    className="bg-red-500 text-white py-1 px-2 rounded mr-2"
+                    onClick={() => deleteStudent(student.id)}
+                  >
+                    Delete
+                  </button>
+                  <button
+                    className="bg-green-600 text-white py-1 px-2 rounded"
+                    onClick={() =>
+                      updateStudent(
+                        student.id,
+                        prompt("Enter new first name", student.firstName),
+                        prompt("Enter new last name", student.lastName),
+                        prompt("Enter new date of birth", student.dateOfBirth),
+                        prompt("Enter new grade", student.grade)
+                      )
+                    }
+                  >
+                    Update
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
+  
+
 };
 
 export default StudentPortal;
