@@ -1,0 +1,34 @@
+{
+  "student": [
+    {
+      "id": "1121",
+      "firstName": "Michael",
+      "lastName": "Williams",
+      "dateOfBirth": "2003-03-01",
+      "currentGrade": "12"
+      
+    },
+    {
+      "id": "1122",
+      "firstName": "Adam",
+      "lastName": "Abubaker",
+      "dateOfBirth": "2004-02-01",
+      "currentGrade": "8"
+      
+    },
+    {
+      "id": "23f8",
+      "firstName": "Adam",
+      "lastName": "Abubaker",
+      "dateOfBirth": "2004-02-01",
+      "currentGrade": "8"
+    },
+    {
+      "id": "2fc2",
+      "firstName": "Adam",
+      "lastName": "Abubaker",
+      "dateOfBirth": "2004-02-01",
+      "currentGrade": "10"
+    }
+  ]
+}
